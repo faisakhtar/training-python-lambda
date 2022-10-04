@@ -12,6 +12,7 @@ jobs:
     - name: Deploy code to Lambda
       uses: mariamrf/py-lambda-action@v1.0.0
       with:
+        lambda_layer_arn : 'arn:aws:lambda:us-east-1:231992682363:layer:samplelayer:1'
         lambda_function_name: 'hello'
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
